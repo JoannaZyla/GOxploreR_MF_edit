@@ -40,10 +40,10 @@ GOTermMFOnLevel <- function(goterm){
     x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
-    stop(paste(c("Check that the term ", x[isna],"are mf GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[isna],"are mf GO-terms and not obsolete"), collapse = " "))
     x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term ", x[nonretired],"are mf GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[nonretired],"are mf GO-terms and not obsolete"), collapse = " "))
     x <- x[-nonretired]
   }
 
